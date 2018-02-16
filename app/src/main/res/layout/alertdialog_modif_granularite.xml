@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dip"
+    android:focusable="false"
+    android:focusableInTouchMode="true">
+
+
+<TextView
+        android:id="@+id/granularitéTexte"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modification de la granularité"
+        android:paddingBottom="10dip"
+        android:layout_below="@+id/spinnerChoixSSID"/>
+
+    <SeekBar
+        android:id="@+id/seekBar5"
+        android:layout_width="500px"
+        android:layout_height="110px"
+        android:max="50"
+        android:progress="5"
+        android:layout_below="@id/granularitéTexte"
+        />
+
+    <EditText
+        android:paddingTop="30px"
+        android:id="@+id/EditSeuil5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/seekBar5"
+        android:layout_below="@id/granularitéTexte"
+        android:windowSoftInputMode="stateHidden"
+        android:inputType="number"
+        android:hint="5"
+        android:paddingLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/NB"
+        android:layout_below="@id/seekBar5"
+        android:textSize="15dp"
+        android:text="NB : Un traitement est de nouveau nécessaire suite à la modification de ce paramètre. "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

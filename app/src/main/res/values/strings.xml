@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="Refresh">Nouvelle mesure</string>
+    <string name="app_name">WifiState</string>
+    <string name="act2_name">WifiState : Seuils</string>
+    <string name="NbMesure">Mesure n°</string>
+    <string name="NbCollecte">Campagne en cours</string>
+    <string name="Carte">Afficher la carte</string>
+    <string name="NewDataText">Nouvelle campagne</string>
+    <string name="Indication">Pour plus de données, voir </string>
+    <string name="Prévisualisation">Prévisualisation :</string>
+    <string name="Seuils">Seuils</string>
+    <string name="Acquisition">Acquisition</string>
+    <string name="Defaut">Utiliser les valeurs par defaut</string>
+    <string name="intro_text">Long click to exit the map.</string>
+    <string name="Acquisition_menu">Acquisition des mesures</string>
+    <string name="nomCampagne">Nom campagne</string>
+    <string name="info">Info : Un seul échantillons ne permet de récupérer qu\'une seule fois les données correspondant à l\'ensemble des point d\'accès trouvés. Un échantillon est récupéré en 4 secondes.</string>
+    <string name="info_fichier">Info : L\'ensemble des données mesurées sont accessibles au sein d\'un fichier portant le nom de la campagne. Ce fichier est accessible depuis le stockage de l\'appareil à l\'intérieur du dossier WifiStateData.</string>
+    <string name="fichier">Fichier de données</string>
+    <string name="discontinueMode">Acquisition discontinue</string>
+    <string name="continueMode">Acquisition continue</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+
+    <!--Serveur Clé-->
+    <string name="APP_KEY">e1ah622l1lqrph4</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings related to login -->
+    <string name="sign_in">Sign in</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- The class name to the ScrollingChildBehavior required for AppBarLayout -->
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageButton android:id="@+id/Collecte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="3dp"
+            android:paddingRight="20dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:src= "@drawable/nouvellecampagne"
+            android:layout_weight="50"/>
+
+
+        <ImageButton android:id="@+id/CollecteContinuer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginRight="3dp"
+            android:paddingLeft="20dp"
+            android:background="@android:color/transparent"
+            android:src= "@drawable/continuer"
+            android:layout_weight="50"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttons2"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/buttons"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageButton android:id="@+id/afficherLaCarte"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="3dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/carte"
+            android:layout_weight="50"/>
+
+        <ImageButton android:id="@+id/Dropbox"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="3dp"
+            android:background="@android:color/transparent"
+            android:src= "@drawable/dropbox"
+            android:layout_weight="50" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/logos"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/buttons2"
+        android:paddingTop="20dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/ctvv"
+            android:background="@android:color/transparent"
+            android:layout_gravity="bottom"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"
+            android:layout_weight="50"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/popo"
+            android:background="@android:color/transparent"
+            android:layout_gravity="bottom"
+            android:scaleType="fitEnd"
+            android:adjustViewBounds="true"
+            android:paddingBottom="10dp"
+            android:layout_weight="50"/>
+    </LinearLayout>
+
+
+
+    /* Fin changement */
+
+</RelativeLayout>

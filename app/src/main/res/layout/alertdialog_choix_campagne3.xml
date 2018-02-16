@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:windowSoftInputMode="stateUnchanged"
+    android:padding="15dip"
+    android:focusable="false"
+    android:focusableInTouchMode="true">
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/granularité"-->
+    <!--android:textSize="@dimen/text_size_medium"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Granularité"-->
+    <!--android:paddingBottom="10dip"-->
+    <!--android:layout_below="@+id/spinner"/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quel réseau souhaitez vous afficher ?"
+        android:textSize="@dimen/text_size_medium"
+        android:id="@+id/choixSSIDText"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerChoixSSID"
+        android:layout_below="@+id/choixSSIDText" />
+
+    <TextView
+        android:id="@+id/granularitéTexte"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Définition de la dimension des carrés à afficher sur la carte (en mètre)"
+        android:paddingBottom="10dip"
+        android:layout_below="@+id/spinnerChoixSSID"/>
+
+    <SeekBar
+        android:id="@+id/seekBar5"
+        android:layout_width="500px"
+        android:layout_height="110px"
+        android:max="500"
+        android:progress="5"
+        android:layout_below="@id/granularitéTexte"
+        />
+
+    <EditText
+        android:paddingTop="30px"
+        android:id="@+id/EditSeuil5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/seekBar5"
+        android:layout_below="@id/granularitéTexte"
+        android:windowSoftInputMode="stateUnchanged"
+        android:hint="5"
+        android:inputType="number"
+        android:paddingLeft="20dp"/>
+
+
+</RelativeLayout>

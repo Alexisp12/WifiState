@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars = "vertical"
+    android:scrollbarStyle="insideInset"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button android:id="@+id/Defaut"
+        android:text="@string/Defaut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/CouleurBackground"
+        android:padding="10dp"
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="5px"
+        android:textColor="@color/Background"
+        >
+    </Button>
+
+    <RelativeLayout
+        android:id="@+id/LayoutSeuils"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/Seuills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_text_size"
+            android:text="@string/Seuils"/>
+        <TextView
+            android:paddingTop="30px"
+            android:id="@+id/Seuil1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text_size"
+            android:text="Seuil 1"
+            android:layout_below="@id/Seuills"/>
+        <EditText
+            android:paddingTop="30px"
+            android:id="@+id/EditSeuil1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/Seuil1"
+            android:layout_below="@id/Seuills"
+            android:hint="00 dB"/>
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_toRightOf="@id/EditSeuil1"
+            android:layout_width="500px"
+            android:layout_height="110px"
+            android:max="100"
+            android:progress="70"
+            android:layout_below="@id/Seuills"
+            />
+        <TextView
+            android:id="@+id/Seuil2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text_size"
+            android:text="Seuil 2"
+            android:paddingTop="60px"
+            android:layout_marginTop="5dip"
+            android:layout_below="@id/EditSeuil1"/>
+        <EditText
+            android:id="@+id/EditSeuil2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/Seuil2"
+            android:layout_below="@id/EditSeuil1"
+            android:paddingTop="60px"
+            android:layout_marginTop="5dip"
+            android:hint="00 dB"/>
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:paddingTop="80px"
+            android:layout_width="500px"
+            android:layout_height="110px"
+            android:layout_toRightOf="@id/EditSeuil2"
+            android:max="100"
+            android:progress="75"
+            android:layout_marginTop="5dip"
+            android:layout_below="@id/Seuil1"/>
+        <TextView
+            android:id="@+id/Seuil3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text_size"
+            android:paddingTop="60px"
+            android:text="Seuil 3"
+            android:layout_marginTop="5dip"
+            android:layout_below="@id/EditSeuil2"/>
+        <EditText
+            android:id="@+id/EditSeuil3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingTop="60px"
+            android:layout_toRightOf="@id/Seuil3"
+            android:layout_below="@id/EditSeuil2"
+            android:layout_marginTop="5dip"
+            android:hint="00 dB"/>
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="500px"
+            android:layout_height="110px"
+            android:paddingTop="80px"
+            android:max="100"
+            android:progress="80"
+            android:layout_toRightOf="@id/EditSeuil3"
+            android:layout_marginTop="5dip"
+            android:layout_below="@id/Seuil2"
+            />
+        <TextView
+            android:id="@+id/Seuil4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="60px"
+            android:textSize="@dimen/medium_text_size"
+            android:text="Seuil 4"
+            android:layout_marginTop="5dip"
+            android:layout_below="@id/EditSeuil3"/>
+        <EditText
+            android:id="@+id/EditSeuil4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/Seuil4"
+            android:paddingTop="60px"
+            android:layout_below="@id/EditSeuil3"
+            android:layout_marginTop="5dip"
+            android:hint="00 dB"/>
+        <SeekBar
+            android:id="@+id/seekBar4"
+            android:layout_width="500px"
+            android:layout_height="110px"
+            android:paddingTop="80px"
+            android:max="100"
+            android:progress="85"
+            android:layout_toRightOf="@id/EditSeuil4"
+            android:layout_marginTop="5dip"
+            android:layout_below="@id/Seuil3"
+            />
+
+    </RelativeLayout>
+
+    //Layout Ajout des seuils de cartographie
+
+    <TextView
+        android:id="@+id/Granularité"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/big_text_size"
+        android:paddingTop="20dp"
+        android:text="Granularité"
+        android:layout_below="@id/LayoutSeuils"/>
+
+    <TextView
+        android:paddingTop="30px"
+        android:id="@+id/Seuil5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text_size"
+        android:text="Tailles de carrés en mètres"
+        android:layout_below="@id/Granularité"/>
+    <SeekBar
+        android:id="@+id/seekBar5"
+        android:layout_width="500px"
+        android:layout_height="110px"
+        android:max="50"
+        android:progress="5"
+        android:layout_below="@id/Seuil5"
+        />
+    <EditText
+        android:paddingTop="30px"
+        android:id="@+id/EditSeuil5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/seekBar5"
+        android:layout_below="@id/Seuil5"
+        android:hint="5"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quel réseau souhaitez vous afficher ?"
+        android:layout_below="@id/seekBar5"
+        android:textSize="@dimen/big_text_size"
+        android:id="@+id/choixSSIDText"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerChoixSSID"
+        android:layout_below="@+id/choixSSIDText" />
+
+    <!--<Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerChoixMAC"
+        android:layout_below="@+id/choixMACText" /> -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choix des émetteurs à afficher"
+        android:layout_below="@id/spinnerChoixSSID"
+        android:textSize="@dimen/big_text_size"
+        android:id="@+id/choixMACText"/>
+
+    <Switch
+        android:id="@+id/SwitchMAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="'@'MAC "
+        android:layout_alignTop="@+id/Defaut"
+        android:layout_toEndOf="@+id/Defaut"
+        android:layout_marginStart="29dp" />
+
+    <Switch
+        android:id="@+id/SwitchCanal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canaux "
+        android:layout_below="@+id/Defaut"
+        android:layout_alignEnd="@+id/SwitchMAC" />
+
+    <!-- On place les deux spinner et text view l'un sur l'autre car ils ne peuvent pas se superposer normalement-->
+    <!-- <Spinner
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/spinnerChoixCanal"
+         android:layout_below="@+id/choixCanalText" /> -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choix des canaux à afficher"
+        android:layout_below="@id/spinnerChoixSSID"
+        android:textSize="@dimen/big_text_size"
+        android:id="@+id/choixCanalText"/>
+
+    <Button android:id="@+id/Acquisition"
+        android:text="Affichage de la carte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choixCanalText"
+        android:background="@color/CouleurBackground"
+        android:textColor="@color/Background"
+        android:padding="40dp"
+        android:layout_marginTop="150dip"
+        android:layout_centerHorizontal="true"
+        >
+    </Button>
+
+    <com.polytech.OutilCarthographique.MultiSelectionSpinner
+        android:id="@+id/input2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:paddingTop="30dp"
+        android:layout_below="@+id/choixMACText"
+        android:layout_alignStart="@+id/input1" />
+
+    <com.polytech.OutilCarthographique.MultiSelectionSpinner
+        android:id="@+id/input1"
+        android:paddingTop="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_below="@+id/choixCanalText"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:text="Mode Indoor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Defaut"
+        android:layout_alignEnd="@+id/Defaut"/>
+
+    </RelativeLayout>
+</ScrollView>
+

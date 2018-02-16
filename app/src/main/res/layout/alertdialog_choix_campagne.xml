@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:windowSoftInputMode="stateUnchanged"
+    android:padding="15dip">
+
+    <TextView
+        android:id="@+id/TextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quelle campagne souhaitez-vous continuer ?"
+        android:textSize="@dimen/medium_text_size"
+        android:paddingBottom="10dip" />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@id/TextView1"
+        />
+    <TextView
+        android:id="@+id/modeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:text="Sous quel mode souhaitez-vous effectuer vos mesures ?"
+        android:textSize="@dimen/medium_text_size"/>
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingTop="5dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/modeInfo"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RadioButton android:id="@+id/radio_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/continueMode"
+            />
+        <RadioButton android:id="@+id/radio_discontinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discontinueMode"
+            />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/TextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Combien d'échantillon souhaitez-vous récupérer à chaque mesure ?"
+        android:layout_below="@id/radioGroup"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        />
+
+    <EditText
+        android:id="@+id/EditText2"
+        android:windowSoftInputMode="stateUnchanged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_below="@id/TextView2"
+        android:hint="1"/>
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_toRightOf="@id/EditText2"
+        android:layout_width="800px"
+        android:layout_height="40px"
+        android:max="30"
+        android:progress="2"
+        android:layout_below="@id/TextView2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:paddingTop="15dp"
+        android:text="L'acquisition discontinue permet d'effectuer des mesures ponctuelles. L'acquisition continue permet de lancer une acquisition continue."/>
+
+
+</RelativeLayout>

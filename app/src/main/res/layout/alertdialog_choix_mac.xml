@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingTop="25dp">
+
+    <TextView
+        android:id="@+id/texteIndicationSSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Réseau séléctionné :" />
+    <TextView
+        android:id="@+id/indicationSSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/texteIndicationSSID"
+
+        android:paddingLeft="5dp"
+        android:text="SSID" />
+
+    <TextView
+        android:id="@+id/choixMacTexte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/texteIndicationSSID"
+        android:text="Souhaitez-vous retirer des points d'accès du calcul ?" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingTop="20dp"
+        android:id="@+id/radioGroup3"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/texteIndicationSSID"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton android:id="@+id/radio_non"
+            android:layout_width="wrap_content"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:text="Non"
+            />
+        <RadioButton android:id="@+id/radio_oui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oui"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/decocherMacTexte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup3"
+        android:text="Mettez à jour la liste des adresses mac à considérer pour le traitement" />
+
+
+    <com.polytech.OutilCarthographique.MultiSelectionSpinnerMacChoisies
+        android:id="@+id/spinner_mac_SSID1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/decocherMacTexte"
+         />
+    <TextView
+        android:id="@+id/QuestSSID2Texte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup3"
+        android:paddingTop="70dp"
+        android:text="Souhaitez-vous ajouter des points d'accès appartenant à un autre réseau ?" />
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingTop="10dp"
+        android:id="@+id/radioGroup4"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/QuestSSID2Texte"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton android:id="@+id/radio_non2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Non"
+            />
+        <RadioButton android:id="@+id/radio_oui2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oui"
+            />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/choixSSID2Texte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup4"
+        android:text="Selection des réseaux qui vous intéressent" />
+
+
+    <com.polytech.OutilCarthographique.MultiSelectionSpinner
+        android:id="@+id/spinner_SSID2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choixSSID2Texte"
+        />
+    <TextView
+        android:id="@+id/choixMAC2Texte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_SSID2"
+        android:text="Selection des adresses mac à prendre en compte lors du traitement" />
+
+
+    <com.polytech.OutilCarthographique.MultiSelectionSpinnerMacAjout
+        android:id="@+id/spinner_mac_SSID2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choixMAC2Texte"
+        />
+
+    <TextView
+        android:id="@+id/NB"
+        android:layout_below="@id/spinner_mac_SSID2"
+        android:textSize="15dp"
+        android:text="NB : Un traitement est de nouveau nécessaire suite à la modification de cette liste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

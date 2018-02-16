@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 23 //24
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "com.blp.outilcartographique.wifistate"
+        minSdkVersion 21// // 21 de base puis 11 puis 19 pour URI_to_Path
+        targetSdkVersion 21 // 21 de base
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_5
+            targetCompatibility JavaVersion.VERSION_1_5
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.6
+        sourceCompatibility 1.6
+    }
+
+    // Serveur
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+dependencies {
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.android.support:support-v4:23'
+    //Serveur en dessous
+    compile 'com.dropbox.core:dropbox-core-sdk:2.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/dropbox-android-sdk-1.6.3.jar')
+    compile files('libs/json_simple-1.1.jar')
+    compile 'com.android.support:design:23.1.1'
+    compile project(':common')
+}
+
+
+

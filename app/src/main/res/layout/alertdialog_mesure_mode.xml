@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dip"
+     >
+    <TextView
+        android:id="@+id/modeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sous quel mode souhaitez-vous effectuer vos mesures ?"
+        android:textSize="@dimen/medium_text_size"/>
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingTop="5dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/modeInfo"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    >
+        <RadioButton android:id="@+id/radio_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/continueMode"
+            />
+        <RadioButton android:id="@+id/radio_discontinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discontinueMode"
+            />
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:paddingTop="15dp"
+        android:text="L'acquisition discontinue permet d'effectuer des mesures ponctuelles. L'acquisition continue permet de lancer une acquisition continue."/>
+</RelativeLayout>

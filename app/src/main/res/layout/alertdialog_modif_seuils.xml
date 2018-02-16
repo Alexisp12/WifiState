@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:windowSoftInputMode="stateUnchanged"
+    android:padding="15dip">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/texte_seuils"
+        android:textSize="@dimen/medium_text_size"
+        android:text="Choix du mode :"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingTop="10dp"
+        android:id="@+id/radioGroup2"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/texte_seuils"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton android:id="@+id/radio_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outdoor (par défaut)"
+            />
+        <RadioButton android:id="@+id/radio_indoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indoor"
+            />
+        <RadioButton android:id="@+id/radio_perso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personnaliser"
+            />
+   </RadioGroup>
+    <TextView
+        android:paddingTop="30px"
+        android:id="@+id/seuil1_texte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text_size"
+        android:text="Seuil 1"
+        android:layout_below="@id/radioGroup2"/>
+    <EditText
+        android:paddingTop="30px"
+        android:id="@+id/EditSeuil1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:inputType="number"
+        android:layout_toRightOf="@id/seuil1_texte"
+        android:layout_below="@id/radioGroup2"
+        android:hint="70 dB"/>
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_toRightOf="@id/EditSeuil1"
+        android:layout_width="500px"
+        android:layout_height="110px"
+        android:max="100"
+        android:progress="70"
+        android:layout_below="@id/radioGroup2"
+        />
+    <TextView
+        android:id="@+id/seuil2_texte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text_size"
+        android:text="Seuil 2"
+        android:paddingTop="60px"
+        android:layout_marginTop="5dip"
+        android:layout_below="@id/EditSeuil1"/>
+    <EditText
+        android:id="@+id/EditSeuil2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/seuil2_texte"
+        android:layout_below="@id/EditSeuil1"
+        android:inputType="number"
+        android:paddingTop="60px"
+        android:layout_marginTop="5dip"
+        android:hint="75 dB"/>
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:paddingTop="80px"
+        android:layout_width="500px"
+        android:layout_height="110px"
+        android:layout_toRightOf="@id/EditSeuil2"
+        android:max="100"
+        android:progress="75"
+        android:layout_marginTop="5dip"
+        android:layout_below="@id/seuil1_texte"/>
+    <TextView
+        android:id="@+id/seuil3_texte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text_size"
+        android:paddingTop="60px"
+        android:text="Seuil 3"
+        android:layout_marginTop="5dip"
+        android:layout_below="@id/EditSeuil2"/>
+    <EditText
+        android:id="@+id/EditSeuil3"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:inputType="number"
+        android:paddingTop="60px"
+        android:layout_toRightOf="@id/seuil3_texte"
+        android:layout_below="@id/EditSeuil2"
+        android:layout_marginTop="5dip"
+        android:hint="80 dB"/>
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="500px"
+        android:layout_height="110px"
+        android:paddingTop="80px"
+        android:max="100"
+        android:progress="80"
+        android:layout_toRightOf="@id/EditSeuil3"
+        android:layout_marginTop="5dip"
+        android:layout_below="@id/seuil2_texte"
+        />
+    <TextView
+        android:id="@+id/seuil4_texte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:textSize="@dimen/medium_text_size"
+        android:text="Seuil 4"
+        android:layout_marginTop="5dip"
+        android:layout_below="@id/EditSeuil3"/>
+    <EditText
+        android:id="@+id/EditSeuil4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/seuil4_texte"
+        android:inputType="number"
+        android:paddingTop="60px"
+        android:layout_below="@id/EditSeuil3"
+        android:layout_marginTop="5dip"
+        android:hint="85 dB"/>
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="500px"
+        android:layout_height="110px"
+        android:paddingTop="80px"
+        android:max="100"
+        android:progress="85"
+        android:layout_toRightOf="@id/EditSeuil4"
+        android:layout_marginTop="5dip"
+        android:layout_below="@id/seuil3_texte"
+        />
+
+    <TextView
+        android:id="@+id/Seuil1_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:layout_below="@id/seekBar4"
+        android:textSize="@dimen/medium_text_size"
+        android:text="Seuil 1 :"/>
+    <TextView
+        android:id="@+id/Seuil1_auto_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/seekBar4"
+        android:layout_toRightOf="@id/Seuil1_auto"
+        android:textSize="@dimen/medium_text_size"
+        android:hint="0 dB"/>
+    <TextView
+        android:id="@+id/Seuil2_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:layout_below="@id/seekBar4"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/Seuil1_auto_val"
+        android:textSize="@dimen/medium_text_size"
+        android:text="Seuil 2 :"/>
+    <TextView
+        android:id="@+id/Seuil2_auto_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/seekBar4"
+        android:layout_toRightOf="@id/Seuil2_auto"
+        android:textSize="@dimen/medium_text_size"
+        android:hint="0 dB"/>
+    <TextView
+        android:id="@+id/Seuil3_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:layout_below="@id/seekBar4"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/Seuil2_auto_val"
+
+        android:textSize="@dimen/medium_text_size"
+        android:text="Seuil 3 :"/>
+    <TextView
+        android:id="@+id/Seuil3_auto_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/seekBar4"
+        android:layout_toRightOf="@id/Seuil3_auto"
+        android:textSize="@dimen/medium_text_size"
+        android:hint="0 dB"/>
+    <TextView
+        android:id="@+id/Seuil4_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:layout_below="@id/seekBar4"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/Seuil3_auto_val"
+
+        android:textSize="@dimen/medium_text_size"
+        android:text="Seuil 4 :"/>
+    <TextView
+        android:id="@+id/Seuil4_auto_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="60px"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/seekBar4"
+        android:layout_toRightOf="@id/Seuil4_auto"
+        android:textSize="@dimen/medium_text_size"
+        android:hint="0 dB"/>
+
+</RelativeLayout>

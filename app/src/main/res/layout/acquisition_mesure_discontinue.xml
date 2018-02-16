@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:theme="@style/MyTheme"
+    >
+    <TextView android:id="@+id/NbCollecte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NbCollecte"
+        android:textSize="@dimen/text_size_large"
+        />
+    <Button
+        android:id="@+id/parametre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paramètres"
+        android:layout_alignParentRight="true"
+        android:background="@color/BackgroundButton"
+        android:textColor="@color/TextButton"
+        />
+
+    <TextView android:id="@+id/DeuxPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" : "
+        android:layout_toRightOf="@id/NbCollecte"
+        android:textSize="@dimen/text_size_large"
+        />
+    <TextView android:id="@+id/nomCampagne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nomCampagne"
+        android:layout_toRightOf="@id/DeuxPoints"
+        android:textSize="@dimen/text_size_large"
+        />
+    <TextView android:id="@+id/NbMesure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NbMesure"
+        android:layout_below="@id/nomCampagne"
+        android:textSize="@dimen/text_size_medium"
+        />
+
+    <TextView android:id="@+id/NbM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/NbMesure"
+        android:layout_below="@id/nomCampagne"
+        android:text="0"
+        android:textSize="@dimen/text_size_medium"
+        />
+    <TextView android:id="@+id/fichier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fichier"
+        android:layout_below="@id/NbMesure"
+        android:textSize="@dimen/text_size_medium"
+        />
+    <TextView android:id="@+id/deupoints2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" : "
+        android:layout_below="@id/NbMesure"
+        android:layout_toRightOf="@id/fichier"
+        android:textSize="@dimen/text_size_medium"
+        />
+    <TextView android:id="@+id/nomFichier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fichier.txt"
+        android:layout_below="@id/NbMesure"
+        android:layout_toRightOf="@id/deupoints2"
+        android:textSize="@dimen/text_size_medium"
+        />
+
+
+    <TextView android:id="@+id/Espace1"
+        android:layout_below="@id/nomFichier"
+        android:layout_height="10px"
+        android:layout_width="match_parent" />
+
+    <Button android:id="@+id/Carte"
+        android:text="@string/Carte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Espace1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/TextButton"
+        android:background="@color/BackgroundButton"
+        android:padding="80px"
+        >
+    </Button>
+
+    <TextView android:id="@+id/Espace2"
+        android:layout_below="@id/Carte"
+        android:layout_height="10px"
+        android:layout_width="match_parent"
+        />
+
+    <Button android:id="@+id/buttonRefresh"
+        android:text="@string/Refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/Espace2"
+        android:textColor="@color/TextButton"
+        android:background="@color/BackgroundButton"
+        android:padding="80px"
+        >
+    </Button>
+
+    <TextView android:id="@+id/Wait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonRefresh"
+        android:text="Wait..."
+        android:textSize="@dimen/text_size_medium"
+        />
+    <TextView android:id="@+id/Echantillon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Wait"
+        android:text="Echantillons recueillis : "
+        android:textSize="@dimen/text_size_medium"
+        />
+    <ProgressBar android:id="@+id/progressbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Echantillon"
+        style="?android:attr/progressBarStyleHorizontal"
+        />
+    <TextView android:id="@+id/Previsualisation"
+        android:text="@string/Prévisualisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressbar"
+        android:paddingRight="10px"
+        android:textSize="@dimen/text_size_medium"
+        >
+    </TextView>
+    <TextView android:id="@+id/NbEchantillon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Wait"
+        android:layout_toRightOf="@id/Echantillon"
+        android:text="0"
+        android:textSize="@dimen/text_size_medium"
+        />
+
+    <ListView android:id="@+id/listViewWifi"
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/Previsualisation">
+    </ListView>
+</RelativeLayout>

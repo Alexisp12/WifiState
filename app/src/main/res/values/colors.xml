@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_material_dark">#009ae1</color>
+    <color name="primary_material_light">#009ae1</color>
+    <color name="primary_dark_material_light">#0080d4</color>
+    <color name="accent_material_light">#ff7c40</color>
+    <color name="TexteInterface">#004877</color>
+    <color name="CouleurBackground">#009ae1</color>
+    <color name="TextButton">#000000</color>
+    <color name="ToolBar">#0089c9</color>
+    <color name="CouleurSeparation">#d8f3ff</color>
+    <!--Ajout serveur 04/03 -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Ajout couleur pour le bandeau de légende de la carte 25/03 -->
+    <color name="Violet_seuil">#8f660066</color>
+    <color name="Rouge_seuil">#8fcc0000</color>
+    <color name="Orange_seuil">#8fcc6600</color>
+    <color name="Jaune_seuil">#8fcccc33</color>
+    <color name="Vert_seuil">#8f009900</color>
+    <color name="Gris_seuil">#8fafafaf</color>
+
+</resources>

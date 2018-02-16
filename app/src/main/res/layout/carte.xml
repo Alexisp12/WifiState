@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="Screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/screenButton"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.Button.Small" />
+
+    <!-- Ajout bandeau de légende couleur et niveau de puissance associé -->
+
+    <!-- texte seuil3 -->
+
+
+    <Button
+        android:text="Legende"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/legendButton"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.Button.Small" />
+
+
+    <!-- texte seuil1 -->
+
+
+    <!-- texte seuil2 -->
+
+
+    <!-- texte seuil5 , contribution résiduelle -->
+
+    <RelativeLayout
+        android:id="@+id/noms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyTheme"
+        android:paddingTop="7dp"
+        android:paddingBottom="2.5dp"
+        android:layout_marginLeft="1dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:text="Campagne : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/nomCampagne"
+            android:text="Nom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textView"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/texteSSID"
+            android:text="SSID : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/nomCampagne"
+            android:paddingLeft="5dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/nomSSID"
+            android:text="nom SSID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/texteSSID"
+            android:layout_weight="1" />
+    </RelativeLayout>
+
+
+    <Switch
+        android:id="@+id/mySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu  "
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:text="Simulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/actualiser"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.Button.Small" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/optionAffichageRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyTheme"
+        android:layout_below="@+id/noms"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="1dp">
+        <TextView
+            android:text="Option d'affichage :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/optionAffichageTexte"
+            />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/optionAffichageTexte"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton android:id="@+id/radio_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Puissance"
+                />
+            <RadioButton android:id="@+id/radio_canaux"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Canaux"
+                />
+            <RadioButton android:id="@+id/radio_mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresses Mac"
+                android:paddingRight="5dp"
+                />
+
+            <Button
+                android:id="@+id/go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Go"
+                style="@style/Widget.AppCompat.Button.Small"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+
+
+
+    <Button
+        android:id="@+id/modifGranularité"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/mySwitch"
+        android:text="Granularité"
+        style="@style/Widget.AppCompat.Button.Small"/>
+
+
+    <Button
+        android:id="@+id/modifSeuils"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/modifGranularité"
+        android:text="Modifier les seuils"
+        style="@style/Widget.AppCompat.Button.Small"/>
+    <Button
+        android:id="@+id/modifMAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/modifSeuils"
+        android:text="Modifier la liste des émetteurs"
+        style="@style/Widget.AppCompat.Button.Small"/>
+
+    <RelativeLayout
+        android:id="@+id/predictionRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyTheme"
+        android:paddingTop="4dp"
+        android:layout_below="@id/optionAffichageRL"
+        android:layout_marginLeft="1dp">
+        <TextView
+            android:text="Simulation : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prediction"
+            />
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nbPrediction"
+            android:layout_toRightOf="@+id/prediction"/>
+
+        <TextView
+            android:text=" passage(s)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/passages"
+            android:layout_toRightOf="@id/nbPrediction"/>
+        <TextView
+            android:text="Aucune case simulé"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prediText"
+            android:layout_below="@+id/passages"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Seuils"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyTheme"
+        android:paddingTop="55dp"
+        android:layout_below="@+id/optionAffichageRL"
+        android:layout_marginLeft="1dp">
+        <TextView
+            android:text="Niveau de réception :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_alignParentTop="true"
+            />
+
+
+        <TextView
+            android:text="   "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView17"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_marginStart="0dp" />
+
+        <!-- texte seuil4 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text=" 00 dB"
+            android:id="@+id/textView6"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView4" />
+
+        <!-- couleur seuil 4 -->
+        <TextView
+            android:text="   "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14"
+            android:background="@color/Rouge_seuil"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView6"
+            android:layout_marginStart="0dp" />
+        <!-- text seuil 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00 dB"
+            android:layout_marginStart="0dp"
+            android:id="@+id/textView7"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView14" />
+        <!-- couleur seuil 3 -->
+        <TextView
+            android:text="   "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView15"
+            android:background="@color/Orange_seuil"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView7" />
+        <!-- text seuil 2-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text="00 dB"
+            android:id="@+id/textView8"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView15" />
+
+
+        <!-- Couleur seuil 2-->
+        <TextView
+            android:text="   "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView16"
+            android:background="@color/Jaune_seuil"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView8"
+            android:layout_marginEnd="0dp" />
+
+        <!-- Text seuil 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text="00 dB"
+            android:id="@+id/textView9"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView16" />
+        <!-- Couleur seuil 1-->
+        <TextView
+            android:text="   "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:background="@color/Vert_seuil"
+            android:layout_marginStart="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView9" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView18"
+            android:text=""
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView13" />
+    </RelativeLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/modifMAC"
+        tools:context=".Carte"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+</RelativeLayout>

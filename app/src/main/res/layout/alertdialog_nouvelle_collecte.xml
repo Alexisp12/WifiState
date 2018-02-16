@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:padding="15dip">
+
+<TextView
+    android:id="@+id/TextView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Comment souhaitez-vous nommer la campagne ?"
+    android:paddingBottom="10dip" />
+
+<EditText
+    android:id="@+id/EditText1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/TextView1"
+    android:hint="Sans nom"/>
+
+<TextView
+    android:id="@+id/TextView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Combien d'échantillons souhaitez-vous récupérer à chaque mesure ?"
+    android:layout_below="@id/EditText1"
+    android:paddingBottom="10dip" />
+
+<EditText
+    android:id="@+id/EditText2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="1"
+    android:layout_below="@id/TextView2"  />
+<SeekBar
+    android:id="@+id/seekBar"
+    android:layout_width="800px"
+    android:layout_height="40px"
+    android:layout_toRightOf="@id/EditText2"
+    android:max="30"
+    android:progress="2"
+    android:layout_below="@id/TextView2"/>
+
+<TextView
+    android:id="@+id/Info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/info"
+    android:layout_below="@id/seekBar"
+    android:paddingBottom="10dip" />
+
+</RelativeLayout>

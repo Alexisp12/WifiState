@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyTheme" parent="android:Theme.DeviceDefault.Light">
+        <item name="android:colorPrimary">@color/CouleurBackground</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark_material_light</item>
+        <item name="android:colorAccent">@color/CouleurBackground</item>
+        <item name="android:colorForeground">@color/foreground_material_light</item>
+        <item name="android:textColorPrimary">@color/common_google_signin_btn_text_dark</item>
+        <item name="android:colorBackground">@color/Background</item>
+        <item name="android:textColorPrimaryInverse">@color/common_google_signin_btn_text_dark_default</item>
+        <item name="android:statusBarColor">@color/ToolBar</item>
+
+    </style>
+
+    <!-- Ajout serveur 04/03 -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>
